@@ -1,0 +1,126 @@
+# AIRAWAT Cryptographic Dataset Generator
+# Requirements File
+# Version: 2.0 - Multi-Language Expansion
+# Date: December 31, 2025
+
+# ============================================================================
+# CORE CRYPTOGRAPHY LIBRARIES
+# ============================================================================
+
+# Modern cryptography (AES, RSA, ECC, hashes, KDFs, signatures)
+cryptography>=42.0.0
+
+# Legacy crypto (DES, RC2/4, IDEA, CAST, Blowfish, Camellia)
+pycryptodome>=3.20.0
+
+# Libsodium bindings (ChaCha20-Poly1305, Ed25519, X25519)
+PyNaCl>=1.5.0
+
+# ============================================================================
+# POST-QUANTUM CRYPTOGRAPHY
+# ============================================================================
+
+# liboqs for post-quantum algorithms (NTRU, BIKE, McEliece, ML-KEM, ML-DSA, etc.)
+# Note: Windows requires manual installation - see PQC_INSTALLATION_WINDOWS.md
+liboqs-python>=0.10.0; platform_system != "Windows"
+
+# ============================================================================
+# HASHING ALGORITHMS
+# ============================================================================
+
+# BLAKE3 hash function
+blake3>=0.4.0
+
+# ============================================================================
+# KEY DERIVATION & PASSWORD HASHING
+# ============================================================================
+
+# bcrypt password hashing
+bcrypt>=4.1.0
+
+# Argon2 password hashing (i, d, id variants)
+argon2-cffi>=23.1.0
+
+# ============================================================================
+# DATA ANALYSIS & STATISTICS (Module 2 & 3)
+# ============================================================================
+
+# Data manipulation and analysis
+pandas>=2.0.0
+
+# Numerical computing
+numpy>=1.24.0
+
+# Scientific computing and statistics
+scipy>=1.10.0
+
+# Machine learning (for clustering and analysis)
+scikit-learn>=1.2.0
+
+# ============================================================================
+# VISUALIZATION (Module 3)
+# ============================================================================
+
+# Static plotting
+matplotlib>=3.7.0
+
+# Statistical visualization
+seaborn>=0.12.0
+
+# Interactive visualizations
+plotly>=5.14.0
+
+# ============================================================================
+# SYSTEM UTILITIES (Module 2)
+# ============================================================================
+
+# System and process utilities (resource monitoring)
+psutil>=5.9.0
+
+# Progress bars
+tqdm>=4.65.0
+
+# YAML configuration
+pyyaml>=6.0.1
+
+# ============================================================================
+# TESTING & DEVELOPMENT
+# ============================================================================
+
+# Testing framework
+pytest>=8.0.0
+pytest-cov>=4.1.0
+pytest-xdist>=3.5.0
+
+# Code quality
+black>=24.0.0
+flake8>=7.0.0
+mypy>=1.8.0
+
+# ============================================================================
+# BUILD TOOLS (for native extensions)
+# ============================================================================
+
+# FFI for C/C++ bindings
+cffi>=1.16.0
+
+# setuptools for package building
+setuptools>=68.0.0
+wheel>=0.42.0
+
+# ============================================================================
+# STANDARD LIBRARY (included with Python 3.8+)
+# ============================================================================
+# - hashlib (MD5, SHA-1, SHA-2, SHA-3, BLAKE2)
+# - hmac (HMAC functions)
+# - secrets (secure random number generation)
+# - csv, json (data formats)
+# - logging, threading, concurrent.futures
+# - pathlib, argparse, datetime, time, sys, os
+
+# ============================================================================
+# PYTHON VERSION REQUIREMENT
+# ============================================================================
+# Python 3.8 or higher required
+# Recommended: Python 3.10+ for best compatibility
+

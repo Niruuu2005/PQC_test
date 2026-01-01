@@ -1,0 +1,161 @@
+{
+  "total_attacks": 116100,
+  "successful_attacks": 4146,
+  "failed_attacks": 111954,
+  "success_rate_percent": 3.571059431524548,
+  "attack_success_rates": {
+    "AIDAAttack": 0.0,
+    "AcousticCryptanalysisAttack": 0.0,
+    "AlgebraicAttackBase": 0.0,
+    "AlgebraicFaultAnalysisAttack": 0.0,
+    "AnnihilatorAttack": 0.0,
+    "AutocorrelationAttack": 4.186046511627907,
+    "BEASTAttack": 20.930232558139537,
+    "BKZAlgorithmAttack": 0.0,
+    "BasicAlgebraicAttack": 0.0,
+    "BasicDifferentialAttack": 0.0,
+    "BasicLinearAttack": 0.0,
+    "BiasExploitationAttack": 0.0,
+    "BirthdayAttack": 0.0,
+    "BirthdayParadoxAttack": 0.0,
+    "BleichenbacherAttack": 20.930232558139537,
+    "BoomerangAttack": 0.0,
+    "CRIMEBREACHAttack": 20.930232558139537,
+    "CacheTimingAttack": 0.0,
+    "ChiSquareAttack": 2.0930232558139537,
+    "ChosenPlaintextDifferentialAttack": 0.0,
+    "ClosestVectorProblemAttack": 0.0,
+    "ColdBootAttack": 0.0,
+    "CollisionSearchAttack": 0.0,
+    "CoppersmithAttack": 0.0,
+    "CryptanalysisAttackBase": 0.0,
+    "CubeAttack": 0.0,
+    "DictionaryAttack": 0.0,
+    "DifferentialFaultAnalysisAttack": 0.0,
+    "DifferentialLinearAttack": 0.0,
+    "DifferentialPowerAnalysisAttack": 0.0,
+    "ElectromagneticAttack": 0.0,
+    "EntropyAnalysisAttack": 84.88372093023256,
+    "ExhaustiveKeySearch": 0.0,
+    "FastCorrelationAttack": 0.0,
+    "FaultInjectionAttack": 0.0,
+    "FrequencyAnalysisAttack": 8.13953488372093,
+    "GroebnerBasisAttack": 0.0,
+    "GroversAlgorithmAttack": 18.6046511627907,
+    "HashCollisionAttackBase": 0.0,
+    "HigherOrderDifferentialAttack": 0.0,
+    "HybridAttack": 0.0,
+    "ImplementationFlawAttackBase": 0.0,
+    "ImpossibleDifferentialAttack": 0.0,
+    "IndexOfCoincidenceAttack": 1.627906976744186,
+    "KasiskiExaminationAttack": 2.0930232558139537,
+    "KeyRecoveryLinearAttack": 0.0,
+    "LLLAlgorithmAttack": 0.0,
+    "LatticeAttackBase": 0.0,
+    "LatticeReductionRSAAttack": 0.0,
+    "LearningWithErrorsAttack": 0.0,
+    "LengthExtensionAttack": 0.0,
+    "LinearCryptanalysisDESAttack": 0.0,
+    "LinearHullAttack": 0.0,
+    "LinearMaskingAttack": 0.0,
+    "LinearizationAttack": 0.0,
+    "MeetInTheMiddleAttack": 0.0,
+    "MulticollisionAttack": 0.0,
+    "MultidimensionalLinearAttack": 0.0,
+    "MultipleLinearAttack": 0.0,
+    "NTRUAttack": 0.0,
+    "NgramAnalysisAttack": 0.0,
+    "PaddingOracleAttack": 20.930232558139537,
+    "ParallelBruteForce": 0.0,
+    "PartitioningAttack": 0.0,
+    "PatternRecognitionAttack": 2.0930232558139537,
+    "PolynomialAttack": 0.0,
+    "PostQuantumVulnerabilityAttack": 18.6046511627907,
+    "PreimageAttack": 0.0,
+    "QuantumAnnealingAttack": 18.6046511627907,
+    "QuantumAttackBase": 0.0,
+    "QuantumFourierTransformAttack": 18.6046511627907,
+    "RainbowTableAttack": 0.0,
+    "RectangleAttack": 0.0,
+    "RelatedKeyDifferentialAttack": 0.0,
+    "RoundReducedLinearAttack": 0.0,
+    "SATSolverAttack": 0.0,
+    "SecondPreimageAttack": 0.0,
+    "ShorsAlgorithmAttack": 18.6046511627907,
+    "ShortestVectorProblemAttack": 0.0,
+    "SideChannelAttackBase": 0.0,
+    "SimonsAlgorithmAttack": 18.6046511627907,
+    "SimplePowerAnalysisAttack": 0.0,
+    "SlideAttack": 0.0,
+    "TemplateAttack": 0.0,
+    "TimeMemoryTradeoff": 0.0,
+    "TimingAttack": 0.0,
+    "TruncatedDifferentialAttack": 0.0,
+    "WeakRandomNumberAttack": 20.930232558139537,
+    "XLAlgorithmAttack": 0.0,
+    "ZeroCorrelationAttack": 0.0
+  },
+  "language_statistics": {
+    "Python": {
+      "total": 116100,
+      "successes": 4146,
+      "success_rate": 3.571059431524548
+    }
+  },
+  "performance": {
+    "total_execution_time_seconds": 22.199493885040283,
+    "avg_execution_time_seconds": 0.00019121011098225912,
+    "max_execution_time_seconds": 0.053381919860839844,
+    "avg_memory_mb": 0.09232515746124033,
+    "max_memory_mb": 12.05078125
+  },
+  "vulnerabilities": {
+    "total_detected": 0,
+    "detection_rate_percent": 0.0
+  },
+  "top_successful_attacks": [
+    [
+      "EntropyAnalysisAttack",
+      84.88372093023256
+    ],
+    [
+      "BEASTAttack",
+      20.930232558139537
+    ],
+    [
+      "BleichenbacherAttack",
+      20.930232558139537
+    ],
+    [
+      "CRIMEBREACHAttack",
+      20.930232558139537
+    ],
+    [
+      "PaddingOracleAttack",
+      20.930232558139537
+    ],
+    [
+      "WeakRandomNumberAttack",
+      20.930232558139537
+    ],
+    [
+      "GroversAlgorithmAttack",
+      18.6046511627907
+    ],
+    [
+      "PostQuantumVulnerabilityAttack",
+      18.6046511627907
+    ],
+    [
+      "QuantumAnnealingAttack",
+      18.6046511627907
+    ],
+    [
+      "QuantumFourierTransformAttack",
+      18.6046511627907
+    ]
+  ],
+  "total_time_seconds": 10863.660510778427,
+  "total_time_hours": 3.01768347521623,
+  "encryptions_processed": 510
+}

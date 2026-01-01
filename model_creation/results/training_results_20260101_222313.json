@@ -1,0 +1,22 @@
+{
+  "attack_success": {
+    "RandomForest": {
+      "accuracy": 0.9978151653230518,
+      "train_size": 342360,
+      "test_size": 85590,
+      "n_classes": 2
+    },
+    "GradientBoosting": {
+      "accuracy": 0.9895431709311836,
+      "train_size": 342360,
+      "test_size": 85590,
+      "n_classes": 2
+    },
+    "LogisticRegression": {
+      "accuracy": 0.9877088444911789,
+      "train_size": 342360,
+      "test_size": 85590,
+      "n_classes": 2
+    }
+  }
+}
