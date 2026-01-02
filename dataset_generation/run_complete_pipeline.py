@@ -84,7 +84,9 @@ def retry_on_error(func, max_retries=3, retry_delay=5):
     raise RuntimeError("Retry logic failed")
 
 
-def phase_1_crypto_dataset(samples=10):
+
+
+def phase_1_crypto_dataset():
     """
     Phase 1: Generate Cryptographic Dataset
     
@@ -92,7 +94,7 @@ def phase_1_crypto_dataset(samples=10):
     """
     print_banner("PHASE 1: Cryptographic Dataset Generation")
     
-    logger.info(f"Starting crypto dataset generation with {samples} samples per algorithm")
+    logger.info("Starting crypto dataset generation with all algorithms")
     
     def generate():
         import subprocess
@@ -106,7 +108,6 @@ def phase_1_crypto_dataset(samples=10):
         cmd = [
             sys.executable,
             "main.py",
-            "--samples", str(samples),
             "--output", "crypto_dataset.csv"
         ]
         
@@ -135,6 +136,8 @@ def phase_1_crypto_dataset(samples=10):
         return True
     
     return retry_on_error(generate, max_retries=3)
+
+
 
 
 def phase_2_attack_dataset(workers=1):
@@ -317,12 +320,12 @@ def main():
     try:
         # Phase 1: Crypto Dataset
         logger.info("\n" + "="*60)
-        phase_1_crypto_dataset(samples=10)
+        phase_1_crypto_dataset()
         logger.info("[OK] Phase 1 Complete\n")
         
         # Phase 2: Attack Dataset
         logger.info("\n" + "="*60)
-        phase_2_attack_dataset(workers=1)
+        phase_2_attack_dataset()
         logger.info("[OK] Phase 2 Complete\n")
         
         # Phase 3: Cryptanalysis Summary

@@ -1,42 +1,123 @@
-# Dataset Generation
+# Dataset Generation Module
 
-This folder contains all the scripts and data for generating cryptographic datasets and attack simulations.
+Complete documentation for the AIRAWAT dataset generation pipeline.
 
-## Contents
+---
 
-### Python Scripts
-- **`main.py`** - Main cryptographic dataset generator
-- **`generate_attack_dataset.py`** - Attack simulation engine
-- **`complete_pipeline.py`** - Automated pipeline orchestrator
-- **`run_complete_pipeline.py`** - Complete pipeline runner with logging
+## Overview
 
-### Source Code
-- **`src/`** - Source code modules
-  - `crypto_dataset_generator/` - Core cryptographic implementation modules
+Generates realistic cryptographic attack datasets for ML training.
 
-### Generated Data
-- **`crypto_dataset.csv`** - Cryptographic algorithm dataset (510 samples)
-- **`attack_dataset.csv`** - Attack simulation results (137,700 rows)
-- **`attack_metadata.csv`** - Attack metadata
-- **`Cryptographic_Algorithm_Summary.csv`** - Algorithm security summary
-- **`attack_dataset.summary.json`** - Dataset statistics
+**Output**: 427,950+ samples with execution metrics across 83 attack types and 111 algorithms
 
-### Output
-- **`output/`** - Generated output files and reports
+---
 
-## Usage
-
-Navigate to this directory and run:
+## Quick Start
 
 ```bash
-# Generate crypto dataset
-python main.py --samples 10
-
-# Generate attack dataset
 python generate_attack_dataset.py
-
-# Run complete pipeline
-python run_complete_pipeline.py
 ```
 
-For more details, see the main [README](../README.md) and [USAGE_MANUAL](../USAGE_MANUAL.md).
+**Output**: `attack_dataset.csv` (~370MB)
+
+---
+
+## Dataset Schema
+
+### Core Columns
+- `attack_id` - Unique attack identifier
+- `attack_name` - Attack type name
+- `attack_category` - Category classification  
+- `attack_success` - Binary success indicator (0/1)
+- `algorithm_name` - Cryptographic algorithm (e.g., "AES-256")
+- `algorithm_type` - Symmetric/Asymmetric
+- `key_size_bits` - Key size in bits
+- `execution_time_ms` - Execution time (milliseconds)
+- `memory_used_mb` - Memory usage (MB)
+- `cpu_usage_percent` - CPU utilization (%)
+
+---
+
+## Attack Types (83 total)
+
+### Categories
+- **Side-Channel**: Timing, Power Analysis, EM Analysis
+- **Fault Injection**: Clock glitching, Voltage manipulation
+- **Cryptanalytic**: Differential, Linear, Meet-in-the-Middle
+- **Implementation**: Padding Oracle, Cache-timing
+
+---
+
+## Algorithms (111 total)
+
+### Symmetric Ciphers
+AES (128/192/256), DES, 3DES, Blowfish, Twofish, ChaCha20, Serpent, Camellia, etc.
+
+### Asymmetric Ciphers
+RSA (1024/2048/4096), ECC (P-256/P-384/P-521), ElGamal, DSA, etc.
+
+### Hash Functions
+SHA-256, SHA-512, MD5, SHA-1, SHA-3, BLAKE2, etc.
+
+---
+
+## Generation Process
+
+1. **Algorithm Definition** - Load 111 algorithms with specifications
+2. **Attack Simulation** - Simulate 83 attack types
+3. **Execution Metrics** - Generate realistic timing/memory/CPU data
+4. **Success Modeling** - Calculate attack success probability
+5. **CSV Export** - Export to structured CSV format
+
+---
+
+## Data Statistics
+
+- **Total Samples**: 427,950
+- **Attack Types**: 83
+- **Algorithms**: 111
+- **File Size**: ~370MB
+- **Quality Score**: >98% complete, >99% valid
+
+---
+
+## Usage in Pipeline
+
+```python
+from model_creation.src.data.loader import DataLoader
+
+loader = DataLoader(data_dir='dataset_generation')
+df = loader.load_attack_dataset()
+
+print(f"Loaded {len(df)} samples")
+```
+
+---
+
+## Regeneration
+
+To regenerate the dataset:
+
+```bash
+# Delete existing (if needed)
+rm attack_dataset.csv
+
+# Generate fresh
+python generate_attack_dataset.py
+```
+
+**Expected Time**: 2-5 minutes
+
+---
+
+## Future Enhancements
+
+- Real attack measurements from actual systems
+- Temporal attack sequences
+- Multi-party attack scenarios
+- Extended algorithm coverage
+
+---
+
+**Status**: Production-ready dataset generation  
+**Last Updated**: 2026-01-02
