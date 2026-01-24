@@ -1,4 +1,4 @@
-# AIRAWAT - Quantum-Enhanced Cryptanalysis System
+# Quantum-Enhanced Cryptanalysis System
 
 **AI-driven Research for Advanced Weaponization of Attack Reconnaissance and Analysis Technologies**
 
